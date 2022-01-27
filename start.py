@@ -15,8 +15,8 @@ config = json.load(open('./config.json', 'r', encoding='utf-8'))
 refresh_time = config['refresh_time']
 member_list = []
 # 保存登录成功的对象
-for i in config['members']:
-    member = Member(i['username'], i['password'])
+for i in config['watch']:
+    member = Member(i['username'], i['password'], i["uid"], i["link"])
     member.login(on_success=lambda: member_list.append(member),
                  on_failure=lambda: logger.warning(i['username'] + ' 登录失败'))
 # 没有登录成功的账号

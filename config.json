@@ -2,8 +2,10 @@
     "refresh_time": 300,
     "members": [
         {
-            "username":"",
-            "password":""
+            "username": "你的用户名",
+            "password": "你的密码",
+            "uid": "被观测者的UID",
+            "link": "推送消息发送的HTTP地址，其中{}会被替换为通知消息（已经 URL 编码）"
         }
     ]
 }
