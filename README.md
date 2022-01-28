@@ -9,7 +9,7 @@
 ```json
 {
   "refresh_time": 300,
-  "members": [
+  "watch": [
     {
       "username": "你的用户名",
       "password": "你的密码",
