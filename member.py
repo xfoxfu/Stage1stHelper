@@ -55,7 +55,7 @@ class Member:
             logger.info('最后访问={} 上次活动={} 上次发表={}'.format(
                 last_visit, last_active, last_post))
 
-            with open("config.json", "r") as f:
+            with open("config.json", "r", encoding='utf-8') as f:
                 config: list = json.load(f)
                 try:
                     state = config["state"][self.uid]
@@ -70,7 +70,7 @@ class Member:
             if last_post != state["last_post"]:
                 self.notify("上次发表时间", state["last_post"], last_post)
 
-            with open("config.json", "w") as f:
+            with open("config.json", "w", encoding='utf-8') as f:
                 if not "state" in config:
                     config["state"] = {}
                 if not self.uid in config["state"]:
